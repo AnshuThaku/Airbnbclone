@@ -66,11 +66,7 @@ store.on("error",()=>{
 // session
 const sessionOptions={
   store,
-<<<<<<< HEAD
-  secret:"mysupersecretcode",
-=======
   secret:process.env.SECRET,
->>>>>>> 4239a94 (Your commit message)
   resave:false,
   saveuninitialized:false,
   cookie:{
@@ -81,13 +77,12 @@ const sessionOptions={
 };
 
 
-<<<<<<< HEAD
-=======
+
 
   
 
 
->>>>>>> 4239a94 (Your commit message)
+
 app.use(session(sessionOptions))
 app.use(flash());
 app.use(passport.initialize());
