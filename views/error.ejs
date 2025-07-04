@@ -1,9 +1,13 @@
-<%  layout("/layouts/boilerplate")-%>
+<% layout("/layouts/boilerplate") -%>
 
-<div class="row mt-3" >
-<div class="alert alert-danger col-6 offset-3" role="alert">
-    <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-
-<h4 class="alert-heading"><%=message  %></h4>
+<div class="row mt-5">
+  <div class="alert alert-danger col-md-6 offset-md-3 text-center" role="alert">
+    <i class="fa-solid fa-triangle-exclamation fa-lg me-2"></i>
+    <h4 class="alert-heading mt-2"><%= message %></h4>
+    <hr />
+    <p>
+      Something went wrong. Please try again or return
+      <a href="/listings">home</a>.
+    </p>
   </div>
 </div>

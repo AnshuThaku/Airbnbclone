@@ -1,23 +1,42 @@
 <% layout("/layouts/boilerplate") %>
-<div class="row mt-3">
-    <h1 class="col-6 offset-3">Login </h1>
-    <div class="col-8 offset-2" >
-<form action="/login" method="post" class="needs-validation" novalidate>
-    <div class="mb-3">
+
+<div class="row mt-4">
+  <div class="col-6 offset-3 text-center">
+    <h2>Log in to WanderLust</h2>
+    <p class="text-muted">Welcome back! Please enter your credentials.</p>
+  </div>
+
+  <div class="col-8 offset-2 mt-3">
+    <form action="/login" method="POST" class="needs-validation" novalidate>
+      <div class="mb-3">
         <label for="username" class="form-label">Username</label>
-        <input type="text" name="username" id="username"
-         class="form-control" required>
-    </div>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          class="form-control"
+          placeholder="e.g. wanderer123"
+          required
+        />
+        <div class="invalid-feedback">Please enter your username</div>
+      </div>
 
-    
-    <div class="mb-3">
-        <label for="password" class="form-label">password</label>
-        <input type="password" name="password" id="password"
-         class="form-control" required>
-    </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          class="form-control"
+          placeholder="••••••••"
+          required
+        />
+        <div class="invalid-feedback">Please enter your password</div>
+      </div>
 
-    <button class="btn btn-success">Login</button>
-
-</form>
-    </div>
+      <div class="d-grid">
+        <button class="btn btn-success" type="submit">Login</button>
+      </div>
+    </form>
+  </div>
 </div>
